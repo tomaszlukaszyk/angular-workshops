@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course';
+
+  trackByFunction(index, item) {
+    return index; // or item.id
+  }
 }

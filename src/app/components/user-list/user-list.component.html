@@ -1,0 +1,14 @@
+<p>user-list works!</p>
+
+<button (click)="warnUser()">click me</button>
+
+<input type="text" [(ngModel)]="inputValue" style="display: block;">
+
+<p>Hello {{inputValue}}!</p>
+
+<p>{{ today | date:'dd/MM/yyyy'}}</p>
+
+<div *ngFor="let user of users">
+  <app-user [childUser]="user" (deleted)="delete($event)"></app-user>
+
+</div>
