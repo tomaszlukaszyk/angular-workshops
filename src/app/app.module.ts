@@ -2,15 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { UserListComponent } from './components/user-list/user-list.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { FormsModule } from '@angular/forms';
-import { UserComponent } from './components/user/user.component';
+import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent,
-    UserComponent,
+    MovieListComponent,
+    MovieComponent,
   ],
   imports: [
     BrowserModule,

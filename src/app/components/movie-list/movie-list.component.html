@@ -9,6 +9,6 @@
 <p>{{ today | date:'dd/MM/yyyy'}}</p>
 
 <div *ngFor="let movie of movies$ | async">
-  <app-user [movie]="movie"></app-user>
+  <app-movie [movie]="movie"></app-movie>
 </div>
 

@@ -17,9 +17,9 @@ export class MoviesService {
       );
   }
 
-  // addClient(newClient: Movie): Observable<Movie> {
+  // addMovie(newClient: Movie): Observable<Movie> {
   //   return this.httpClient.post<Movie>(
-  //     `${this.apiUrl}/customers`,
+  //     `${this.apiUrl}/movies`,
   //     newClient
   //   );
   // }

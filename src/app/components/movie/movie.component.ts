@@ -1,11 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  selector: 'app-movie',
+  templateUrl: './movie.component.html',
+  styleUrls: ['./movie.component.scss']
 })
-export class UserComponent implements OnInit {
+export class MovieComponent implements OnInit {
 
   @Input() movie: Movie;
   @Output() deleted = new EventEmitter<Movie>();

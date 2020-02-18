@@ -4,11 +4,11 @@ import { map } from 'rxjs/operators'
 import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss']
+  selector: 'app-movie-list',
+  templateUrl: './movie-list.component.html',
+  styleUrls: ['./movie-list.component.scss']
 })
-export class UserListComponent implements OnInit {
+export class MovieListComponent implements OnInit {
 
   constructor(private moviesService: MoviesService) { }
   movies$: Observable<Movie[]>;
