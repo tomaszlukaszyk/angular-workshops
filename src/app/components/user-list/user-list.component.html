@@ -8,7 +8,7 @@
 
 <p>{{ today | date:'dd/MM/yyyy'}}</p>
 
-<div *ngFor="let user of users">
-  <app-user [childUser]="user" (deleted)="delete($event)"></app-user>
-
+<div *ngFor="let movie of movies$ | async">
+  <app-user [movie]="movie"></app-user>
 </div>
+

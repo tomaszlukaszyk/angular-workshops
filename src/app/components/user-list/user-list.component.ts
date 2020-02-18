@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { users } from 'src/mock-data/mock-users';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'
+import { MoviesService } from 'src/app/services/movies.service';
 
 @Component({
   selector: 'app-user-list',
@@ -8,15 +10,18 @@ import { users } from 'src/mock-data/mock-users';
 })
 export class UserListComponent implements OnInit {
 
-  constructor() { }
-
-  users: User[];
+  constructor(private moviesService: MoviesService) { }
+  movies$: Observable<Movie[]>;
   inputValue: string;
   today: Date;
 
   ngOnInit() {
     this.today = new Date();
-    this.users = users.sort(this.compareName);
+    this.movies$ = this.moviesService.getMovies().pipe(
+      map(movies => {
+        return movies.filter(u => u.id > 2);
+      })
+    );
   }
 
   compareName(firstElement: User, secondElement: User) {
@@ -31,10 +36,6 @@ export class UserListComponent implements OnInit {
 
   warnUser() {
     alert('You clicked me you bastard!');
-  }
-
-  delete(user: User) {
-    this.users = this.users.filter((u) => user.id !== u.id );
   }
 
 }

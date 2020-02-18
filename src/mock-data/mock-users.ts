@@ -1,8 +1,8 @@
 export const users: User[] = [
   {
     id: 1,
-    lastName: 'Snow',
     name: 'Jon',
+    lastName: 'Snow',
   },
   {
     id: 2,

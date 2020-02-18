@@ -7,15 +7,15 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  @Input() childUser: User;
-  @Output() deleted = new EventEmitter<User>();
+  @Input() movie: Movie;
+  @Output() deleted = new EventEmitter<Movie>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  delete(user: User) {
+  delete(user: Movie) {
     // some internal logic?
     this.deleted.emit(user);
     // some other logic after?

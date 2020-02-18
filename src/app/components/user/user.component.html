@@ -1,4 +1,10 @@
-<span>{{ childUser.id }}. </span>
-<span>{{ childUser.lastName }} </span>
-<span>{{ childUser.name }} </span>
-<button (click)="delete(childUser)">delete</button>
+<span>{{ movie.id }}. </span>
+<span>{{ movie.director }} </span>
+<span>{{ movie.releaseDate }} </span>
+<span>{{ movie.title }} </span>
+<div>
+  <span>genres:</span>
+  <span *ngFor="let genre of movie.genres">{{ genre }}</span>
+</div>
+
+<button (click)="delete(movie)">delete</button>
