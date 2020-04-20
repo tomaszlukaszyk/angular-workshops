@@ -1,0 +1,10 @@
+<form [formGroup]="movieForm">
+  <input type="text" formControlName="title">
+  <input type="text" formControlName="releaseDate">
+  <input type="text" formControlName="director">
+  <input type="text" formControlName="genres">
+</form>
+<!-- <p>value: {{ name.value }}</p> -->
+
+<button (click)="setDefault()">set default</button>
+<button (click)="logForm()">log this</button>

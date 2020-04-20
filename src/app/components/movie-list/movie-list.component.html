@@ -9,6 +9,13 @@
 <p>{{ today | date:'dd/MM/yyyy'}}</p>
 
 <div *ngFor="let movie of movies$ | async">
-  <app-movie [movie]="movie"></app-movie>
+  <app-movie [movie]="movie" (deleted)="deleteMovie($event)" ></app-movie>
 </div>
+
+
+<button (click)="addmovie()">add movie</button>
+<button (click)="cancelAdding()">cancel</button>
+<app-movie-form *ngIf="isInEditMode" [editedMovie]="movieToEdit"></app-movie-form>
+
+<button (click)="addDummyMovie()">add Dummy</button>
 

@@ -14,6 +14,16 @@ export class MovieListComponent implements OnInit {
   movies$: Observable<Movie[]>;
   inputValue: string;
   today: Date;
+  isInEditMode: boolean;
+  movieToEdit: null;
+
+  dummyMovie: Movie = {
+    director: 'Angular Super Students',
+    id: 2777,
+    genres: ['drama', 'comedy'],
+    releaseDate: this.today,
+    title: 'Super Film about Angular',
+  }
 
   ngOnInit() {
     this.today = new Date();
@@ -38,4 +48,19 @@ export class MovieListComponent implements OnInit {
     alert('You clicked me you bastard!');
   }
 
+  addmovie() {
+    this.isInEditMode = true;
+  }
+
+  cancelAdding() {
+    this.isInEditMode = false;
+  }
+
+  addDummyMovie() {
+    this.moviesService.addMovie(this.dummyMovie).subscribe();
+  }
+
+  deleteMovie(movie: Movie) {
+    console.log(movie);
+  }
 }

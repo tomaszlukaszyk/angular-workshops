@@ -17,10 +17,10 @@ export class MoviesService {
       );
   }
 
-  // addMovie(newClient: Movie): Observable<Movie> {
-  //   return this.httpClient.post<Movie>(
-  //     `${this.apiUrl}/movies`,
-  //     newClient
-  //   );
-  // }
+  addMovie(movie: Movie): Observable<Movie> {
+    return this.httpClient.post<Movie>(
+      `${this.apiUrl}/movies`,
+      movie
+    );
+  }
 }

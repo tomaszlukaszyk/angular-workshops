@@ -1,0 +1,7 @@
+<form [formGroup]='customerForm'>
+  <input type="text" formControlName="name" />
+</form>
+
+<div *ngFor="let control of customerForm.controls">
+  {{ control.value }}
+</div>
